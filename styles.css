@@ -1,0 +1,117 @@
+/* Additional CSS styles for custom polish, glassmorphism, animations and light mode support */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light mode overrides */
+html:not(.dark) {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) nav a {
+  color: #475569;
+}
+html:not(.dark) nav a:hover {
+  color: #0f172a;
+}
+
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+  color: #0f172a;
+}
+
+html:not(.dark) p {
+  color: #475569;
+}
+
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/70,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/90,
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-slate-950\/60,
+html:not(.dark) .bg-slate-950\/80 {
+  background-color: #f1f5f9;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/60,
+html:not(.dark) .border-slate-800\/80 {
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) input {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+html:not(.dark) input::placeholder {
+  color: #94a3b8;
+}
+
+/* Smooth Focus Rings */
+input:focus, button:focus {
+  outline: none;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0% { opacity: 0.4; transform: scale(0.98); }
+  100% { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* Toast Animation */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast-animate {
+  animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
