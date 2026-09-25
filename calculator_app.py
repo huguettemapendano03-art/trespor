@@ -236,15 +236,6 @@ class CalculatorApp(ctk.CTk):
             self._render_logic_keypad()
 
     def _render_standard_keypad(self):
-        buttons = [
-            ["MC", "MR", "M+", "M-", "C", "⌫"],
-            ["%", "(", ")", "1/x", "x²", "÷"],
-            ["7", "8", "9", "×", "√x", "−"],
-            ["4", "5", "6", "+", "±", "x³"],
-            ["1", "2", "3", "=", "", ""],
-            ["0", ".", "", "", "", ""]
-        ]
-
         # Standard grid layout (5x4 primary keypad + memory row)
         grid_buttons = [
             ["MC", "MR", "M+", "M-", "C", "⌫"],
@@ -270,7 +261,7 @@ class CalculatorApp(ctk.CTk):
             ["7", "8", "9", "(", ")", "−"],
             ["4", "5", "6", "ln", "log", "+"],
             ["1", "2", "3", "n!", "abs", "="],
-            ["±", "0", ".", "1/x", "mod", ""]
+            ["±", "0", ".", "1/x", "MOD", ""]
         ]
 
         for r, row in enumerate(grid_buttons):
