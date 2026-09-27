@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+checkers/__pycache__/
+*.png
